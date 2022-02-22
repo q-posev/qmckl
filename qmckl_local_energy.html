@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-01 Tue 09:35 -->
+<!-- 2022-02-22 Tue 10:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Local Energy</title>
@@ -333,43 +333,43 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org127a345">1. Context</a>
+<li><a href="#orga593c8d">1. Context</a>
 <ul>
-<li><a href="#orgbf4b29d">1.1. Data structure</a></li>
+<li><a href="#orgba947b8">1.1. Data structure</a></li>
 </ul>
 </li>
-<li><a href="#org59e6b94">2. Computation</a>
+<li><a href="#org3272951">2. Computation</a>
 <ul>
-<li><a href="#org97d04ae">2.1. Kinetic energy</a>
+<li><a href="#org0e40a06">2.1. Kinetic energy</a>
 <ul>
-<li><a href="#orge3e5085">2.1.1. Get</a></li>
-<li><a href="#org154a50f">2.1.2. Provide</a></li>
-<li><a href="#org13871be">2.1.3. Compute kinetic enregy</a></li>
-<li><a href="#org157b295">2.1.4. Test</a></li>
+<li><a href="#orgf291808">2.1.1. Get</a></li>
+<li><a href="#orgf880fbf">2.1.2. Provide</a></li>
+<li><a href="#orgda0c9dc">2.1.3. Compute kinetic enregy</a></li>
+<li><a href="#orga8b077f">2.1.4. Test</a></li>
 </ul>
 </li>
-<li><a href="#org2e932ab">2.2. Potential energy</a>
+<li><a href="#org6cee8b9">2.2. Potential energy</a>
 <ul>
-<li><a href="#orgdc7ad74">2.2.1. Get</a></li>
-<li><a href="#org0c73ede">2.2.2. Provide</a></li>
-<li><a href="#orgb140ebb">2.2.3. Compute potential enregy</a></li>
-<li><a href="#org31ed8e1">2.2.4. Test</a></li>
+<li><a href="#orgfd4d9e6">2.2.1. Get</a></li>
+<li><a href="#org1894cc4">2.2.2. Provide</a></li>
+<li><a href="#org51f3f58">2.2.3. Compute potential enregy</a></li>
+<li><a href="#orgba7758a">2.2.4. Test</a></li>
 </ul>
 </li>
-<li><a href="#orgb308e30">2.3. Local energy</a>
+<li><a href="#org03f0a59">2.3. Local energy</a>
 <ul>
-<li><a href="#org4cd7aa5">2.3.1. Get</a></li>
-<li><a href="#org7a6bf3e">2.3.2. Provide</a></li>
-<li><a href="#orga196530">2.3.3. Compute local enregy</a></li>
-<li><a href="#org1bdfa21">2.3.4. Test</a></li>
+<li><a href="#orga30f5eb">2.3.1. Get</a></li>
+<li><a href="#org05b5ade">2.3.2. Provide</a></li>
+<li><a href="#orgf17285e">2.3.3. Compute local enregy</a></li>
+<li><a href="#org3b3a35b">2.3.4. Test</a></li>
 </ul>
 </li>
-<li><a href="#org7d53865">2.4. Drift vector</a>
+<li><a href="#org6e762aa">2.4. Drift vector</a>
 <ul>
-<li><a href="#org8a6edbc">2.4.1. Get</a></li>
-<li><a href="#orga8abddf">2.4.2. Provide</a></li>
-<li><a href="#org1b3756e">2.4.3. Compute drift vector</a></li>
-<li><a href="#org0dec6c5">2.4.4. Test</a></li>
+<li><a href="#org44e007f">2.4.1. Get</a></li>
+<li><a href="#org2ee0dc3">2.4.2. Provide</a></li>
+<li><a href="#org6eab13c">2.4.3. Compute drift vector</a></li>
+<li><a href="#org0e1bc5c">2.4.4. Test</a></li>
 </ul>
 </li>
 </ul>
@@ -378,8 +378,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org127a345" class="outline-2">
-<h2 id="org127a345"><span class="section-number-2">1</span> Context</h2>
+<div id="outline-container-orga593c8d" class="outline-2">
+<h2 id="orga593c8d"><span class="section-number-2">1</span> Context</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 The following arrays are stored in the context:
@@ -452,8 +452,8 @@ Computed data:
 </table>
 </div>
 
-<div id="outline-container-orgbf4b29d" class="outline-3">
-<h3 id="orgbf4b29d"><span class="section-number-3">1.1</span> Data structure</h3>
+<div id="outline-container-orgba947b8" class="outline-3">
+<h3 id="orgba947b8"><span class="section-number-3">1.1</span> Data structure</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="org-src-container">
 <pre class="src src-c"><span style="color: #a020f0;">typedef</span> <span style="color: #a020f0;">struct</span> <span style="color: #228b22;">qmckl_local_energy_struct</span> {
@@ -488,12 +488,12 @@ this mechanism.
 </div>
 </div>
 
-<div id="outline-container-org59e6b94" class="outline-2">
-<h2 id="org59e6b94"><span class="section-number-2">2</span> Computation</h2>
+<div id="outline-container-org3272951" class="outline-2">
+<h2 id="org3272951"><span class="section-number-2">2</span> Computation</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org97d04ae" class="outline-3">
-<h3 id="org97d04ae"><span class="section-number-3">2.1</span> Kinetic energy</h3>
+<div id="outline-container-org0e40a06" class="outline-3">
+<h3 id="org0e40a06"><span class="section-number-3">2.1</span> Kinetic energy</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Where the kinetic energy is given as:
@@ -517,8 +517,8 @@ case is given as follows:
 </p>
 </div>
 
-<div id="outline-container-orge3e5085" class="outline-4">
-<h4 id="orge3e5085"><span class="section-number-4">2.1.1</span> Get</h4>
+<div id="outline-container-orgf291808" class="outline-4">
+<h4 id="orgf291808"><span class="section-number-4">2.1.1</span> Get</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <div class="org-src-container">
 <pre class="src src-c"><span style="color: #228b22;">qmckl_exit_code</span> <span style="color: #0000ff;">qmckl_get_kinetic_energy</span>(<span style="color: #228b22;">qmckl_context</span> <span style="color: #a0522d;">context</span>, <span style="color: #228b22;">double</span>* <span style="color: #a020f0;">const</span> <span style="color: #a0522d;">kinetic_energy</span>);
@@ -527,14 +527,14 @@ case is given as follows:
 </div>
 </div>
 
-<div id="outline-container-org154a50f" class="outline-4">
-<h4 id="org154a50f"><span class="section-number-4">2.1.2</span> Provide</h4>
+<div id="outline-container-orgf880fbf" class="outline-4">
+<h4 id="orgf880fbf"><span class="section-number-4">2.1.2</span> Provide</h4>
 </div>
 
-<div id="outline-container-org13871be" class="outline-4">
-<h4 id="org13871be"><span class="section-number-4">2.1.3</span> Compute kinetic enregy</h4>
+<div id="outline-container-orgda0c9dc" class="outline-4">
+<h4 id="orgda0c9dc"><span class="section-number-4">2.1.3</span> Compute kinetic enregy</h4>
 <div class="outline-text-4" id="text-2-1-3">
-<table id="orge0bace3" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org6fb8405" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -763,12 +763,12 @@ case is given as follows:
 </div>
 </div>
 
-<div id="outline-container-org157b295" class="outline-4">
-<h4 id="org157b295"><span class="section-number-4">2.1.4</span> Test</h4>
+<div id="outline-container-orga8b077f" class="outline-4">
+<h4 id="orga8b077f"><span class="section-number-4">2.1.4</span> Test</h4>
 </div>
 </div>
-<div id="outline-container-org2e932ab" class="outline-3">
-<h3 id="org2e932ab"><span class="section-number-3">2.2</span> Potential energy</h3>
+<div id="outline-container-org6cee8b9" class="outline-3">
+<h3 id="org6cee8b9"><span class="section-number-3">2.2</span> Potential energy</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 The potential energy is the sum of all the following terms
@@ -804,8 +804,8 @@ contributions.
 </p>
 </div>
 
-<div id="outline-container-orgdc7ad74" class="outline-4">
-<h4 id="orgdc7ad74"><span class="section-number-4">2.2.1</span> Get</h4>
+<div id="outline-container-orgfd4d9e6" class="outline-4">
+<h4 id="orgfd4d9e6"><span class="section-number-4">2.2.1</span> Get</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <div class="org-src-container">
 <pre class="src src-c"><span style="color: #228b22;">qmckl_exit_code</span> <span style="color: #0000ff;">qmckl_get_potential_energy</span>(<span style="color: #228b22;">qmckl_context</span> <span style="color: #a0522d;">context</span>, <span style="color: #228b22;">double</span>* <span style="color: #a020f0;">const</span> <span style="color: #a0522d;">potential_energy</span>);
@@ -814,14 +814,14 @@ contributions.
 </div>
 </div>
 
-<div id="outline-container-org0c73ede" class="outline-4">
-<h4 id="org0c73ede"><span class="section-number-4">2.2.2</span> Provide</h4>
+<div id="outline-container-org1894cc4" class="outline-4">
+<h4 id="org1894cc4"><span class="section-number-4">2.2.2</span> Provide</h4>
 </div>
 
-<div id="outline-container-orgb140ebb" class="outline-4">
-<h4 id="orgb140ebb"><span class="section-number-4">2.2.3</span> Compute potential enregy</h4>
+<div id="outline-container-org51f3f58" class="outline-4">
+<h4 id="org51f3f58"><span class="section-number-4">2.2.3</span> Compute potential enregy</h4>
 <div class="outline-text-4" id="text-2-2-3">
-<table id="orgc027b9e" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org3690644" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -949,12 +949,12 @@ contributions.
 </div>
 </div>
 
-<div id="outline-container-org31ed8e1" class="outline-4">
-<h4 id="org31ed8e1"><span class="section-number-4">2.2.4</span> Test</h4>
+<div id="outline-container-orgba7758a" class="outline-4">
+<h4 id="orgba7758a"><span class="section-number-4">2.2.4</span> Test</h4>
 </div>
 </div>
-<div id="outline-container-orgb308e30" class="outline-3">
-<h3 id="orgb308e30"><span class="section-number-3">2.3</span> Local energy</h3>
+<div id="outline-container-org03f0a59" class="outline-3">
+<h3 id="org03f0a59"><span class="section-number-3">2.3</span> Local energy</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 The local energy is the sum of kinetic and potential energies.
@@ -968,8 +968,8 @@ E_L = KE + PE
 </div>
 
 
-<div id="outline-container-org4cd7aa5" class="outline-4">
-<h4 id="org4cd7aa5"><span class="section-number-4">2.3.1</span> Get</h4>
+<div id="outline-container-orga30f5eb" class="outline-4">
+<h4 id="orga30f5eb"><span class="section-number-4">2.3.1</span> Get</h4>
 <div class="outline-text-4" id="text-2-3-1">
 <div class="org-src-container">
 <pre class="src src-c"><span style="color: #228b22;">qmckl_exit_code</span> <span style="color: #0000ff;">qmckl_get_local_energy</span>(<span style="color: #228b22;">qmckl_context</span> <span style="color: #a0522d;">context</span>, <span style="color: #228b22;">double</span>* <span style="color: #a020f0;">const</span> <span style="color: #a0522d;">local_energy</span>);
@@ -978,14 +978,14 @@ E_L = KE + PE
 </div>
 </div>
 
-<div id="outline-container-org7a6bf3e" class="outline-4">
-<h4 id="org7a6bf3e"><span class="section-number-4">2.3.2</span> Provide</h4>
+<div id="outline-container-org05b5ade" class="outline-4">
+<h4 id="org05b5ade"><span class="section-number-4">2.3.2</span> Provide</h4>
 </div>
 
-<div id="outline-container-orga196530" class="outline-4">
-<h4 id="orga196530"><span class="section-number-4">2.3.3</span> Compute local enregy</h4>
+<div id="outline-container-orgf17285e" class="outline-4">
+<h4 id="orgf17285e"><span class="section-number-4">2.3.3</span> Compute local enregy</h4>
 <div class="outline-text-4" id="text-2-3-3">
-<table id="orgce0b368" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org90d3a28" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -1081,12 +1081,12 @@ E_L = KE + PE
 </div>
 </div>
 
-<div id="outline-container-org1bdfa21" class="outline-4">
-<h4 id="org1bdfa21"><span class="section-number-4">2.3.4</span> Test</h4>
+<div id="outline-container-org3b3a35b" class="outline-4">
+<h4 id="org3b3a35b"><span class="section-number-4">2.3.4</span> Test</h4>
 </div>
 </div>
-<div id="outline-container-org7d53865" class="outline-3">
-<h3 id="org7d53865"><span class="section-number-3">2.4</span> Drift vector</h3>
+<div id="outline-container-org6e762aa" class="outline-3">
+<h3 id="org6e762aa"><span class="section-number-3">2.4</span> Drift vector</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 The drift vector is calculated as the ration of the gradient
@@ -1100,8 +1100,8 @@ with the determinant of the wavefunction.
 </p>
 </div>
 
-<div id="outline-container-org8a6edbc" class="outline-4">
-<h4 id="org8a6edbc"><span class="section-number-4">2.4.1</span> Get</h4>
+<div id="outline-container-org44e007f" class="outline-4">
+<h4 id="org44e007f"><span class="section-number-4">2.4.1</span> Get</h4>
 <div class="outline-text-4" id="text-2-4-1">
 <div class="org-src-container">
 <pre class="src src-c"><span style="color: #228b22;">qmckl_exit_code</span> <span style="color: #0000ff;">qmckl_get_drift_vector</span>(<span style="color: #228b22;">qmckl_context</span> <span style="color: #a0522d;">context</span>, <span style="color: #228b22;">double</span>* <span style="color: #a020f0;">const</span> <span style="color: #a0522d;">drift_vector</span>);
@@ -1110,14 +1110,14 @@ with the determinant of the wavefunction.
 </div>
 </div>
 
-<div id="outline-container-orga8abddf" class="outline-4">
-<h4 id="orga8abddf"><span class="section-number-4">2.4.2</span> Provide</h4>
+<div id="outline-container-org2ee0dc3" class="outline-4">
+<h4 id="org2ee0dc3"><span class="section-number-4">2.4.2</span> Provide</h4>
 </div>
 
-<div id="outline-container-org1b3756e" class="outline-4">
-<h4 id="org1b3756e"><span class="section-number-4">2.4.3</span> Compute drift vector</h4>
+<div id="outline-container-org6eab13c" class="outline-4">
+<h4 id="org6eab13c"><span class="section-number-4">2.4.3</span> Compute drift vector</h4>
 <div class="outline-text-4" id="text-2-4-3">
-<table id="orgfcfcba8" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org9b43853" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -1338,15 +1338,15 @@ with the determinant of the wavefunction.
 </div>
 </div>
 
-<div id="outline-container-org0dec6c5" class="outline-4">
-<h4 id="org0dec6c5"><span class="section-number-4">2.4.4</span> Test</h4>
+<div id="outline-container-org0e1bc5c" class="outline-4">
+<h4 id="org0e1bc5c"><span class="section-number-4">2.4.4</span> Test</h4>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: TREX CoE</p>
-<p class="date">Created: 2022-02-01 Tue 09:35</p>
+<p class="date">Created: 2022-02-22 Tue 10:12</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
